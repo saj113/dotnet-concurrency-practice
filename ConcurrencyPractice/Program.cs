@@ -3,11 +3,13 @@
 using ConcurrencyPractice;
 using ConcurrencyPractice.MonitorBlockingQueue;
 using ConcurrencyPractice.MutexBlockingQueue;
+using ConcurrencyPractice.TokenBucketFilter;
 
 var testRunner = new Dictionary<string, ITestRunner>
 {
     { "1", new MutexBlockingQueueTestRunner() },
-    { "2", new MonitorBlockingQueueTestRunner() }
+    { "2", new MonitorBlockingQueueTestRunner() },
+    { "3", new TokenBucketFilterTestRunner() }
 };
 
 Console.WriteLine("Choose a test to run:");
